@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 p-0 bg-green-100">
+  <div class="relative h-screen w-screen">
+    <!-- Chatbox Container -->
+    <div class="chatbox absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[70%] h-[80%] bg-white shadow-lg rounded-lg flex flex-col ">
+      <!-- Chat Messages -->
+      <div class="chats grow overflow-y-auto px-4 py-2">
+        <!-- Left Aligned Messages -->
+        <div class="chat-left mb-2">
+          <p class="bg-slate-100 max-w-[300px] p-2 rounded-lg shadow text-left">
+            Hello!
+          </p>
+          <p class="bg-slate-100 max-w-[300px] p-2 rounded-lg shadow text-left mt-2">
+            How are you doing today?
+          </p>
+        </div>
+        <!-- Right Aligned Messages -->
+        <div class="chat-right text-right mb-2 flex flex-col items-end">
+          <p class="bg-blue-100 max-w-[300px] p-2 rounded-lg shadow">
+            I'm good, thanks for asking!
+          </p>
+          <p class="bg-blue-100 max-w-[300px] p-2 rounded-lg shadow mt-2">
+            How about you?
+          </p>
+        </div>
+        <!-- Example Long Message -->
+        <div class="chat-left mb-2">
+          <p class="bg-slate-100 max-w-[70%] p-2 rounded-lg shadow text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis at aspernatur excepturi velit modi, id consectetur pariatur deserunt fugiat, fuga repellat nihil quas dolores maiores ipsa debitis ut quo non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit reiciendis quas nobis vitae totam possimus sit, libero illo optio, architecto adipisci commodi autem quos! Iste aut doloribus culpa qui minima.
+          </p>
+        </div>
+      </div>
+      <!-- Send Message Section -->
+      <div class="send flex items-center px-4 py-2 shadow-lg border-t justify-center">
+        <input type="text" 
+               class="input flex-grow rounded-full placeholder:pl-2 py-2 px-4 border focus:outline-none focus:ring focus:ring-blue-200" 
+               placeholder="Type your message..." 
+               aria-label="Message Input">
+        <button class="btn ml-2 bg-blue-500 text-white px-4 py-2 shadow-lg hover:shadow-xl rounded-lg hover:scale-105 transition focus:ring focus:ring-pink-200">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
